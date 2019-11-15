@@ -1,49 +1,133 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>Prezentacja</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/black.css" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Performance audit tool</h2>
+          <h2>
+            in <font color="#3670A1">Py</font><font color="#F8CF42">thon</font>
+          </h2>
+        </section>
+        <section>
+          <h2>Kim jestem?</h2>
+        </section>
+        <section>
+          <h2>Jak wyglądał case?</h2>
+          <p class="fragment">
+            Do sprawdzania wydajności używamy PageSpeed Insights
+          </p>
+          <p class="fragment">
+            Olbrzymia sitemapa Netguru.com — ponad 3000 podstron 🙄
+          </p>
+          <p class="fragment">
+            Globalne moduły są używane na różnych podstronach
+          </p>
+        </section>
+        <section
+          data-transition="slide"
+          data-background="#4d7e65"
+          data-background-transition="zoom"
+        >
+          <h2>Zacząłem kombinować 💡</h2>
+          <p class="fragment">
+            PageSpeed Insights ma API 🤔
+          </p>
+          <p class="fragment">W sumie fajnie napisać coś w Pythonie 🤔</p>
+          <p class="fragment">
+            Ekstra jakby zapisywało rezultaty do pliku 🤔
+          </p>
+          <p class="fragment">
+            Chwytliwa nazwa 🤔
+          </p>
+          <p class="fragment">
+            Nie szukaj gotowych rozwiązań, po co to komu 😂
+          </p>
+        </section>
+        <section
+          data-transition="slide"
+          data-background="#4d7e65"
+          data-background-transition="zoom"
+        >
+          <h2>Atrakcje po drodze 🎢</h2>
+          <p class="fragment">
+            Synchroniczne przetwarzanie danych zajmuje kupę czasu
+          </p>
+          <p class="fragment">Konfiguracja testów 🔧</p>
+          <p class="fragment">Asynchorniczne wyniki</p>
+          <p class="fragment">
+            Uśrednione wyniki z testów
+          </p>
+        </section>
+        <section
+          data-transition="slide"
+          data-background="#4d7e65"
+          data-background-transition="zoom"
+        >
+          <h2>Podsumowując</h2>
+          <p class="fragment">
+            Bardzo prosty projekt - 100 linijek
+          </p>
+          <p class="fragment">Nauczyłem się ciut Pythona ⌨️</p>
+          <p class="fragment">
+            Istnieją lepsze rozwiązania — ale może komuś się to przyda,
+            zainspiruje(?)
+          </p>
+        </section>
+        <section
+          data-transition="slide"
+          data-background="#b5533c"
+          data-background-transition="zoom"
+        >
+          <h2>Demo</h2>
+          <blockquote>
+            https://github.com/zciluk/<b>Pagespeed-async-tests</b>
+          </blockquote>
+        </section>
+      </div>
+    </div>
 
-		<script src="js/reveal.js"></script>
+    <script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
-			});
-		</script>
-	</body>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
 </html>
