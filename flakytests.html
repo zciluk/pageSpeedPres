@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Prezentacja</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/moon.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.type = "text/css";
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? "css/print/pdf.css"
+        : "css/print/paper.css";
+      document.getElementsByTagName("head")[0].appendChild(link);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-transition="slide" data-background-transition="zoom">
+          <h1><font color="#3670A1">Flaky</font> testy</h1>
+          <h4>czyli niekończąca się batalia</h4>
+        </section>
+        <section>
+          <h2>Co to są flaky testy?</h2>
+        </section>
+        <section>
+          <h2>Przyczyny flaky testów</h2>
+          <p class="fragment">
+            Dynamiczna treść
+          </p>
+          <p class="fragment">
+            Źle zaimplementowane waity
+          </p>
+          <p class="fragment">
+            Błędy współbieżności
+          </p>
+          <p class="fragment">
+            3rd party
+          </p>
+          <p class="fragment">
+            Infrastruktura
+          </p>
+        </section>
+        <section
+          data-transition="slide"
+          data-background="#004680"
+          data-background-transition="zoom"
+        >
+          <h2>Projekt</h2>
+          <img src="images/logo1.png" height="100" style="border: none" />
+          <img src="images/logo2.png" height="100" style="border: none" />
+          <img src="images/logo3.png" height="100" style="border: none" />
+          <img src="images/logo4.png" height="100" style="border: none" />
+        </section>
+        <section
+          data-transition="slide"
+          data-background="#004680"
+          data-background-transition="zoom"
+          data-markdown
+        >
+          <h2>Napotkany problem:</h2>
+          <p class="fragment">
+            Kilka zespołów pracujących nad jednym projektem
+          </p>
+          <p class="fragment">
+            Pojawiające się problemy backendu przy równoległych zapytaniach API
+          </p>
+          <p class="fragment">
+            <i>gauge run --max-retries-count=3</i>
+          </p>
+          <p class="fragment">
+            Wyniki ograniczone do jednego scenariusza testowego
+          </p>
+        </section>
+
+        <section
+          data-transition="slide"
+          data-background="#004680"
+          data-background-transition="zoom"
+        >
+          <h2>Demo</h2>
+          <a> https://github.com/zciluk/<b>get-failed-steps</b> </a>
+        </section>
+      </div>
+    </div>
+
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: "plugin/markdown/marked.js" },
+          { src: "plugin/markdown/markdown.js" },
+          { src: "plugin/notes/notes.js", async: true },
+          { src: "plugin/highlight/highlight.js", async: true }
+        ]
+      });
+    </script>
+  </body>
+</html>
